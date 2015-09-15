@@ -1,7 +1,11 @@
 # JSON
 
+```javascript
+window.JSON
 ```
-> window.JSON
+
+```javascript
+self.JSON
 ```
 
 ## stringify
