@@ -187,7 +187,11 @@ a[4] = 6;
 a[4] // -> 6
 ```
 
+## ArrayBufferView
 
+_DataView_ and all the _\<DATA-TYPE\>Array_ types is known under one as _ArrayBufferViews_. _ArrayBufferView_ is not an real interface, but a grouping of related elements.
+
+ 
 ## Links
 
 - [Typed Array Specification](https://www.khronos.org/registry/typedarray/specs/latest/)

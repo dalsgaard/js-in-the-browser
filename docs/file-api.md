@@ -102,18 +102,18 @@ reader.result;
 
 ### readyState
 
-The state of the reader.
+Returns the state of the reader.
 
 
 ```javascript
 reader.readyState;
 ```
 
-The Reader can be in one of the following states.
+The reader can be in one of the following states.
 
-- EMPTY
-- LOADING
-- DONE
+- EMPTY (0)
+- LOADING (1)
+- DONE (2)
 
 ```javascript
 FileReader.DONE; // -> 2
@@ -133,7 +133,11 @@ FileReader emits the following events.
 - loadend
 - progress
 
-
+```javascript
+reader.addEventListener('load', function (e) {
+  // ...
+});
+```
 
 ## FileList
 
@@ -197,9 +201,24 @@ Time of the last modification of the file (number of milliseconds since 1 Januar
 files[0].lastModified;
 ```
 
+## Blob URL
+
+### Creating
+
+```javascript
+var url = URL.createObjectURL(blob);
+```
+
+### Revoking
+
+```javascript
+URL.revokeObjectURL(url);
+```
+
 
 ## Links
 
 - [File API](https://w3c.github.io/FileAPI/)
+- [Can I Use](http://caniuse.com/#feat=filereader)
 - [Can I Use](http://caniuse.com/#feat=blobbuilder)
 - [Can I Use](http://caniuse.com/#feat=bloburls)
