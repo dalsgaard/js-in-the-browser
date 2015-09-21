@@ -95,9 +95,7 @@ req.readyState === XMLHttpRequest.LOADING;
 
 ### Events
 
-_XMLHttpRequest_ inherits from _EventTarget_.
-
-_XMLHttpRequest_ emits the following events.
+_XMLHttpRequest_ inherits from _EventTarget_ and emits the following events.
 
 - loadstart
 - progress
