@@ -1,22 +1,30 @@
 # Base64
 
+In the main window.
+
 ```javascript
 > window.atob
 > window.btoa
 ```
+
+In a _Web Worker_.
 
 ```javascript
 > self.atob
 > self.btoa
 ```
 
-## btoa
+### btoa
+
+Base64 encoding.
 
 ```javascript
 var b = btoa('Foo/Bar') // -> "Rm9vL0Jhcg=="
 ```
 
-## atob
+Base64 decoding.
+
+### atob
 
 ```javascript
 var a = atob('Rm9vL0Jhcg==') // -> "Foo/Bar"
