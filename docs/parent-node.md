@@ -1,40 +1,34 @@
-# ParentNode
+## ParentNode
 
-```
-var doc = window.document;
-var body = window.document.body;
-```
-
-## Properties
 
 ### children
 
-Returns a HTMLCollection of all the children of this parent node that is of the type Element.
+Returns a _HTMLCollection_ of all the children of this parent node that is of the type Element.
 
-```
-> body.children
+```javascript
+body.children;
 ```
 
 ### firstElementChild
 
-Returns the first child that is of type Element for this parent node, or null if there is none.
+Returns the first child that is of type _Element_ for this parent node, or null if there is none.
 
-```
-> body.firstElementChild
+```javascript
+body.firstElementChild;
 ```
 
 ### lastElementChild
 
-Returns the last child that is of type Element for this parent node, or null if there is none.
+Returns the last child that is of type _Element_ for this parent node, or null if there is none.
 
-```
-> body.lastElementChild
+```javascript
+body.lastElementChild;
 ```
 
 ### childElementCount
 
-Returns the number of children that is of type Element for this parent node.
+Returns the number of children that is of type _Element_ for this parent node.
 
-```
-> body.childElementCount
+```javascript
+body.childElementCount;
 ```

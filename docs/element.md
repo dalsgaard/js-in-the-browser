@@ -1,15 +1,15 @@
-# Element
+# Elements
 
-```
+## Element
+
+```javascript
 var div = document.createElement('div');
 ```
 
-```
-var doc = window.document;
+```javascript
 var body = window.document.body;
 ```
 
-## Properties
 
 ### attributes
 
@@ -174,22 +174,6 @@ Parses the specified text as HTML and inserts the resulting nodes into the DOM t
 ```
 > body.insertAdjacentHTML('afterbegin', '<p>Foo</p>')
 > body.firstElementChild.insertAdjacentHTML('afterend', '<p>Foo</p>')
-```
-
-### querySelector(selectors)
-
-Returns the first element that is a descendant of the element that matches the specified group of selectors, where the parameter 'selectors' is a string containing the selectors.
-
-```
-> body.querySelector('div.foo, div.bar')
-```
-
-### querySelectorAll(selectors)
-
-Returns all elements (as a NodeList) that is a descendant of the element that matches the specified group of selectors, where the parameter 'selectors' is a string containing the selectors.
-
-```
-> body.querySelectorAll('div.foo, div.bar')
 ```
 
 ### removeAttribute(name)
