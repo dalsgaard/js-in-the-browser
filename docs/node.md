@@ -122,25 +122,6 @@ doc.firstChild.nextSibling;
 
 ---
 
-### localName
-
-Returns the node's local tag name, or null if there is no tag name.
-
-```javascript
-body.localName; // -> "body"
-doc.localName; // -> null
-```
-
-### prefix
-
-Returns the node's namespace prefix, or null if there is none.
-
-```javascript
-body.prefix; // -> null
-```
-
----
-
 ### nodeValue
 
 Returns the node's value as a string, or null if it has no value.
@@ -185,7 +166,7 @@ Returns a boolean value indicating whether the node is identical to another node
 Two nodes are identical iff:
 
 - The two nodes are of the same type.
-- The following properties are equal: nodeName, localName, namespaceURI, prefix, nodeValue.
+- The following properties are equal: nodeName, nodeValue.
 - The attributes are equal.
 - The children are equal.
 
@@ -220,34 +201,6 @@ Returns a boolean value indicating whether this node contains _other_ node.
 
 ```javascript
 body.contains(body.lastChild); // -> true
-```
-
----
-
-### lookupPrefix(namespace)
-
-Returns the node's prefix for a given namespace URI, or _null_ if none found.
-
-```javascript
-svg.lookupPrefix('http://www.w3.org/1999/xlink');
-```
-
-### lookupNamespaceURI(prefix)
-
-Returns the node's namespace URI for a given prefix, or _null_ if none found. Supplying _null_ for the prefix will return the default namespace.
-
-```javascript
-body.lookupNamespaceURI(null);
-svg.lookupNamespaceURI('xlink');
-```
-
-### isDefaultNamespace(namespace)
-
-Returns a boolean value indicating whether the node's default namespace is _namespace_.
-
-```javascript
-body.isDefaultNamespace('http://www.w3.org/1999/xhtml');
-svg.isDefaultNamespace('http://www.w3.org/2000/svg');
 ```
 
 ---
@@ -345,7 +298,31 @@ body.firstElementChild.querySelectorAll('div > p');
 ```
 
 
+## NonDocumentTypeChildNode
+
+Implemented by _Element_, and _CharacterData_.
+
+### previousElementSibling
+
+Returns the closest sibling node of type element prior to this node, or null if there is non.
+
+
+```javascript
+body.lastChild.previousElementSibling;
+```
+
+### nextElementSibling
+
+Returns the closest sibling node of type element following this node, or null if there is non.
+
+
+```javascript
+body.firstChild.nextElementSibling;
+```
+
+
 ## Links
 
 - [DOM Living Standard - Node](https://dom.spec.whatwg.org/#node)
 - [DOM Living Standard - ParentNode](https://dom.spec.whatwg.org/#interface-parentnode)
+- [DOM Living Standard - NonDocumentTypeChildNode](https://dom.spec.whatwg.org/#interface-nondocumenttypechildnode)
