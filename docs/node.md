@@ -1,7 +1,6 @@
-# Node Tree
+# Nodes
 
 ```javascript
-var doc = window.document;
 var body = window.document.body;
 ```
 
@@ -236,6 +235,18 @@ Removes a child node from the node, where 'child' is the node to be removed. The
 
 ```javascript
 var removed = body.removeChild(body.firstChild)
+```
+
+---
+
+### Events
+
+_Node_ inherits from _EventTarget_.
+
+```javascript
+body.firstChild.addEventListener('click', function (e) {
+  // ...
+});
 ```
 
 

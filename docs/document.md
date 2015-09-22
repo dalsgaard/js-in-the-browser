@@ -102,6 +102,32 @@ Creates an _Attr_ object with the given _name_.
 var attr = document.createAttribute('lang');
 ```
 
+---
+
+### DOMContentLoaded
+
+The document emits the 'DOMContentLoaded' event. It fired when the document has been completely loaded and parsed, without waiting for stylesheets, and images to finish loading.
+
+```javascript
+document.addEventListener('DOMContentLoaded', function (event) {
+  // ...
+});
+```
+
+## NonElementParentNode
+
+Implemented by _Document_, and _DocumentFragment_.
+
+### getElementById(id)
+
+Returns the first _Element_ that matches the given _id_.
+
+```javascript
+var foo = document.getElementById('foo');
+  // ...
+});
+```
+
 
 ## Links
 

@@ -122,9 +122,7 @@ reader.readyState === FileReader.LOADING;
 
 ### Events
 
-_FileReader_ inherits from _EventTarget_.
-
-FileReader emits the following events.
+_FileReader_ inherits from _EventTarget_ and emits the following events.
 
 - abort
 - error
