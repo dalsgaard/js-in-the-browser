@@ -172,3 +172,4 @@ req.getAllResponseHeaders();
 ## Links
 
 - [XMLHttpRequest](https://xhr.spec.whatwg.org/)
+- [Can I Use](http://caniuse.com/#feat=xhr2)

@@ -185,6 +185,59 @@ attr.ownerElement;
 ```
 
 
+## DOMTokenList
+
+### length
+
+Returns the number of tokens in the list.
+
+``` javascript
+body.classList.length;
+```
+
+### item(index)
+
+Returns the token at the given index.
+
+``` javascript
+body.classList.item(2);
+```
+
+### contains(token)
+
+Whether or not the given token is in the token list.
+
+``` javascript
+body.classList.contains('foo');
+```
+
+---
+
+### add(token)
+
+Adds the given token to the token list.
+
+``` javascript
+body.classList.add('foo');
+```
+
+### remove(token)
+
+Removes the given token from the token list.
+
+``` javascript
+body.classList.remove('foo');
+```
+
+### toggle(token)
+
+Toggles the presence of the given token in the token list.
+
+``` javascript
+body.classList.toggle('foo');
+```
+
+
 ## Element (DOM Parsing and Serialization)
 
 Extension to _Element_ from the DOM Parsing and Serialization specification.
@@ -226,4 +279,5 @@ body.firstElementChild.insertAdjacentHTML('afterend', '<p>Foo</p>');
 
 - [DOM Living Standard - Element](https://dom.spec.whatwg.org/#element)
 - [DOM Living Standard - Attr](https://dom.spec.whatwg.org/#attr)
+- [DOM Living Standard - DOMTokenList](https://dom.spec.whatwg.org/#interface-domtokenlist)
 - [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/)
