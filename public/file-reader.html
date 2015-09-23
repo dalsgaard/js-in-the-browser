@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<script>
+  var blob = new Blob(['Foo', 'Bar'], { type: 'image/png' });
+  var reader = new FileReader();
+  reader.addEventListener('load', function (e) {
+    console.log(reader.result);
+  });
+  reader.readAsText(blob);
+</script>
+</body>
+</html>
