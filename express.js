@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 
+app.use(express.static('public'));
+
 app.get('/history/*', function (req, res) {
   console.log(req.path);
   res.sendFile(__dirname + '/public/history.html');
