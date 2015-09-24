@@ -59,12 +59,16 @@ history.replaceState({ foo: 42 }, '', '/foo');
 
 ### popstate
 
+A new state has arrived.
+
 ```javascript
 window.addEventListener('popstate', function (e) {
   // ...
 });
 ```
 ### hashchange
+
+The URL changed.
 
 ```javascript
 window.addEventListener('hashchange', function (e) {
@@ -74,6 +78,8 @@ window.addEventListener('hashchange', function (e) {
 
 #### HashChangeEvent
 
+A _HashChangeEvent_ contains the new- and the old URL.
+
 ```javascript
 window.addEventListener('hashchange', function (e) {
   e.newURL;
@@ -82,6 +88,8 @@ window.addEventListener('hashchange', function (e) {
 ```
 
 ## Location
+
+The location API is a property on the _window_.
 
 ```javascript
 window.location;
@@ -101,5 +109,5 @@ location.href = 'http://foo.bar/baz';
 ## Links
 
 - [HTML Living Standard](https://html.spec.whatwg.org/multipage/browsers.html)
-- [Can I Use](http://caniuse.com/#feat=history)
-- [Can I Use](http://caniuse.com/#feat=hashchange)
+- [Can I Use - History](http://caniuse.com/#feat=history)
+- [Can I Use - HashChange](http://caniuse.com/#feat=hashchange)

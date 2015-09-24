@@ -29,6 +29,8 @@ _WebSocket_ inherits from _EventTarget_ and emits the following events.
 
 #### open
 
+The connection to the server is open.
+
 ```javascript
 ws.addEventListener('open', function (e) {
   // ...
@@ -37,7 +39,7 @@ ws.addEventListener('open', function (e) {
 
 #### message
 
-The actual message can be read from the events data property.
+A message was received. The actual message can be read from the events data property.
 
 ```javascript
 ws.addEventListener('message', function (e) {
@@ -47,6 +49,8 @@ ws.addEventListener('message', function (e) {
 
 #### error
 
+An error occurred.
+
 ```javascript
 ws.addEventListener('error', function (e) {
   // ...
@@ -54,6 +58,8 @@ ws.addEventListener('error', function (e) {
 ```
 
 #### close
+
+The connection is closed.
 
 ```javascript
 ws.addEventListener('close', function (e) {
@@ -93,6 +99,12 @@ ws.close(3408, 'WAT!');
 
 ### readyState
 
+Returns the state of the _WebSocket_.
+
+```javascript
+ws.readyState;
+```
+
 - CONNECTING (0)
 - OPEN (1)
 - CLOSING (2)
@@ -104,6 +116,8 @@ ws.readyState === WebSocket.CONNECTING;
 ```
 
 ### binaryType
+
+A string indicating how binary data should be delivered.
 
 - 'blob'
 - 'arraybuffer'
